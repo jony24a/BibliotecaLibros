@@ -1,0 +1,171 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, rgba(58,123,213,0.8), rgba(0,212,255,0.8)), url('https://www.transparenttextures.com/patterns/cubes.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Cambiamos a flex-start para alinear hacia la parte superior */
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 48px;  /* Aumentamos un poco el tamaño */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* Estilos del contenedor */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    grid-template-areas: 
+        "agregarLibro registrarUsuario"
+        "prestarLibro devolverLibro"
+        "editarUsuario ."
+        "librosRegistrados usuariosRegistrados";
+}
+
+/* Reglas específicas para la disposición */
+.agregar-libro {
+    grid-area: agregarLibro;
+}
+
+.registrar-usuario {
+    grid-area: registrarUsuario;
+}
+
+.editar-usuario {
+    grid-area: editarUsuario;
+}
+
+.prestar-libro {
+    grid-area: prestarLibro;
+}
+
+.devolver-libro {
+    grid-area: devolverLibro;
+}
+
+.libros-registrados {
+    grid-area: librosRegistrados;
+}
+
+.usuarios-registrados {
+    grid-area: usuariosRegistrados;
+}
+
+/* Tarjetas y Formularios */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Botones */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Listados de libros y usuarios */
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background-color: #f44336;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+li button:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-in-out;
+}
