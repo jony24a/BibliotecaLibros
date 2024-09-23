@@ -1,5 +1,3 @@
-// Clases de la biblioteca
-
 class Libro {
     constructor(titulo, autor, isbn) {
         this.titulo = titulo;
@@ -81,7 +79,7 @@ class Biblioteca {
 const biblioteca = new Biblioteca();
 let idUsuario = 1;
 
-// Función para actualizar la lista de libros en la UI
+
 function actualizarListaLibros() {
     const listaLibros = document.getElementById('listaLibros');
     listaLibros.innerHTML = '';
@@ -92,7 +90,6 @@ function actualizarListaLibros() {
     });
 }
 
-// Función para actualizar la lista de usuarios en la UI
 function actualizarListaUsuarios() {
     const listaUsuarios = document.getElementById('listaUsuarios');
     listaUsuarios.innerHTML = '';
@@ -104,7 +101,7 @@ function actualizarListaUsuarios() {
     });
 }
 
-// Evento para agregar un libro
+
 document.getElementById('agregarLibroBtn').addEventListener('click', () => {
     const titulo = document.getElementById('tituloLibro').value;
     const autor = document.getElementById('autorLibro').value;
@@ -122,7 +119,7 @@ document.getElementById('agregarLibroBtn').addEventListener('click', () => {
     }
 });
 
-// Evento para registrar un usuario
+
 document.getElementById('registrarUsuarioBtn').addEventListener('click', () => {
     const nombre = document.getElementById('nombreUsuario').value;
 
@@ -136,7 +133,6 @@ document.getElementById('registrarUsuarioBtn').addEventListener('click', () => {
     }
 });
 
-// Evento para prestar un libro
 document.getElementById('prestarLibroBtn').addEventListener('click', () => {
     const idUsuario = document.getElementById('usuarioPrestar').value;
     const isbn = document.getElementById('isbnPrestar').value;
@@ -152,7 +148,7 @@ document.getElementById('prestarLibroBtn').addEventListener('click', () => {
     }
 });
 
-// Evento para devolver un libro
+
 document.getElementById('devolverLibroBtn').addEventListener('click', () => {
     const idUsuario = document.getElementById('usuarioDevolver').value;
     const isbn = document.getElementById('isbnDevolver').value;
@@ -168,7 +164,6 @@ document.getElementById('devolverLibroBtn').addEventListener('click', () => {
     }
 });
 
-// Evento para editar un usuario
 document.getElementById('editarUsuarioBtn').addEventListener('click', () => {
     const idUsuario = document.getElementById('idUsuarioEditar').value;
     const nuevoNombre = document.getElementById('nuevoNombreUsuario').value;
@@ -181,7 +176,6 @@ document.getElementById('editarUsuarioBtn').addEventListener('click', () => {
     }
 });
 
-// Función para eliminar un usuario
 function eliminarUsuario(id) {
     biblioteca.eliminarUsuario(id);
     actualizarListaUsuarios();

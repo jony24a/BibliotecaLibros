@@ -1,4 +1,3 @@
-/* Estilos Generales */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +12,7 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Cambiamos a flex-start para alinear hacia la parte superior */
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
@@ -23,13 +22,13 @@ h1 {
     text-align: center;
     color: #fff;
     margin-bottom: 40px;
-    font-size: 48px;  /* Aumentamos un poco el tamaño */
+    font-size: 48px; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     width: 100%;
     padding-top: 20px;
 }
 
-/* Estilos del contenedor */
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -44,7 +43,7 @@ h1 {
         "librosRegistrados usuariosRegistrados";
 }
 
-/* Reglas específicas para la disposición */
+
 .agregar-libro {
     grid-area: agregarLibro;
 }
@@ -73,7 +72,7 @@ h1 {
     grid-area: usuariosRegistrados;
 }
 
-/* Tarjetas y Formularios */
+
 .card {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
@@ -101,7 +100,7 @@ input:focus {
     outline: none;
 }
 
-/* Botones */
+
 button {
     width: 100%;
     padding: 12px;
@@ -124,7 +123,6 @@ button:focus {
     outline: none;
 }
 
-/* Listados de libros y usuarios */
 ul {
     list-style: none;
     margin-top: 10px;
@@ -154,7 +152,6 @@ li button:hover {
     transform: scale(1.05);
 }
 
-/* Animaciones */
 @keyframes fadeIn {
     0% {
         opacity: 0;
